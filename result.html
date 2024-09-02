@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+     body{
+        background-image:url(static/image2.jpg);
+        background-size:cover;
+     }
+     img{
+      height:400px;
+      width:65
+
+      0px;
+      border:1px solid green;
+      float:left;
+      margin-left:25%;
+
+     }
+</style>
+<body>
+<header class="bg-success text_white" style="width: auto; height: 100px; border: 3px solid gray; align-items:center;">
+    <marquee>
+        <h1 style="stroke: aqua;font-family: 'Times New Roman', Times, serif;align-items: center;">
+            <b>RICE LEAF DISEASE DETECTION SYSTEM</b>
+        </h1>
+    </marquee>
+</header>
+<div class="container col-md-6 bg-warning" style="border:1px solid green">
+    {% if res %}
+    <center><h2>Predicted disease is {{ res}}</h2>
+     {% endif %}
+  </center>
+</div>
+<br>
+
+    <div class="img">
+       <img src="static/h.jpg" align="center" >
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rice plant diseases</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+    header{
+    padding:20px;
+    font-size:50px;
+    font-family:TimesNewRoman;
+    text-align:center;
+    }
+
+    .div{
+
+    }
+
+    .h{
+    font-size:40px;
+    font-weight: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgba(255, 255, 255,0.5);
+    box-shadow: 2px 2px 10px black;
+    }
+
+    body{
+    background-image:url(static/rice2.jpg);
+    background-size:cover;
+    }
+
+    .h3{
+    padding:2px;
+    font-size:25px;
+    font-family:TimesNewRoman;
+    text-align:center;
+    color: blue;
+    font-style: unset;
+    }
+
+    .h2{
+    padding:2px;
+    font-size:30px;
+    font-family:TimesNewRoman;
+    text-align:center;
+    color: solid;
+    font-style: unset;
+    }
+
+    .s{
+    font-size:20px;
+    font-weight: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgba(255, 255, 255,0.2);
+    box-shadow: 5px 5px 10px black;
+    }
+</style>
+</head>
+<body>
+<header class="text_white h">
+        <b>RICE LEAF DISEASE DETECTION</b>
+
+</header>
+<br/>
+<!--<center><h3><b>NOTE:  use the downloaded dataset</b></h3></center>-->
+<div class="container col-md-4 div">
+
+    <form name="f1" action="/test" enctype="multipart/form-data" method="post">
+        <table class="table">
+
+            <tr>
+                <td>
+                    <input type="file" name="img" placeholder="Leaf" required/>
+                </td>
+            </tr>
+
+
+
+        </table>
+        <input type="submit" value="Predict" class="btn btn-danger"/>
+
+    </form>
+
+</div>
+
+<br>
+<span >
+     {% if res %}
+    <div><h2><center>Predicted disease is {{ res}}</center></h2></div>
+     {% endif %}
+</span>
+
+</body>
+</html>
